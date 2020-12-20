@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>Gallery</title>
+<style>
+img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia;
+  padding: 5px;
+  background: #EBE8E7;
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #white;
+}
+.header h1 {
+  font-size: 20px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #4A6163;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFC94B;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #FFC94B;
+  color: black;
+}
+
+</style>
+</head>
+
+<body>
+<div class="header" width="50%">
+  <embed src="gif/gallery.gif" width="1000" height="400" autostart="true">
+</div>
+<div class="topnav">
+<a href="index.html">Home</a>
+<a href="mybiodata.html">My Biodata</a>
+<a href="myexperience.html">My Experience</a>
+<a href="myeducation.html">My Education</a>
+<a href="myfamily.html">My Family</a>
+<a href="gallery.html" style="float:right">Gallery</a>
+</div>
+</body>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+<body>
+<h2 style="text-align:center">My Love Family and My Friends</h2>
+<div class="container">
+<div class="mySlides">
+<div class="numbertext">1 / 13</div>
+<img src="jpeg/konvo.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">2 / 13</div>
+<img src="jpeg/athall.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">3 / 13</div>
+<img src="jpeg/usmhall.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">4 / 13</div>
+<img src="jpeg/birthday.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">5 / 13</div>
+<img src="jpeg/haji.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">6 / 13</div>
+<img src="jpeg/siblings.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">7 / 13</div>
+<img src="jpeg/classmatestage.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">8 / 13</div>
+<img src="jpeg/classmate.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">9 / 13</div>
+<img src="jpeg/anugerah.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">10 / 13</div>
+<img src="jpeg/genganugerah.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">11 / 13</div>
+<img src="jpeg/school.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">12 / 13</div>
+<img src="jpeg/afterspm.jpg" style="width:50%">
+</div>
+<div class="mySlides">
+<div class="numbertext">13 / 13</div>
+<img src="jpeg/uitmevent.jpg" style="width:50%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+<div class="caption-container">
+<p id="caption"></p>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script> 
+</body>
+</html>
